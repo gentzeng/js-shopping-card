@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('SonarCodeQuality') {
       environment {
-        SCANNER_HOME =SonarQubeSanner
+        SCANNER_HOME=SonarQubeSanner
       }
       steps {
         nodejs(nodeJSInstallationName: 'NodeJS 14.15.4' ) {
