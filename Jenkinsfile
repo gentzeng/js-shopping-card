@@ -6,6 +6,9 @@ pipeline {
         SCANNER_HOME =SonarQubeSanner
       }
       steps {
+        nodejs(nodeJSInstallationName: 'NodeJS 14.15.4' ) {
+         sh 'npm run lint' 
+        }
         withSonarQubeEnv 'SonarQube' {
           sh '''$SCANNER_HOME/bin/sonar-scanner
           '''
@@ -25,3 +28,4 @@ pipeline {
       }
     }
   }
+}
