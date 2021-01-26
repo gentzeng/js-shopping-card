@@ -33,7 +33,6 @@ pipeline {
         }
       }
     }
-
     stage('Test') {
       steps {
         nodejs(nodeJSInstallationName: 'NodeJS 14.15.4' ) {
