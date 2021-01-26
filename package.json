@@ -3,23 +3,23 @@
   "version": "1.0.0",
   "description": "Project for practicing front-end web development with JavaScript.",
   "main": "./app/main.js",
-  "files": {
-    "scss": "./app/assets/scss/",
-    "css": "./app/assets/css/"
+  "config": {
+    "pathScss": "./app/assets/scss",
+    "pathCss": "./app/assets/css"
   },
   "scripts": {
     "browser-sync": "browser-sync start --config bs-config.js",
     "css": "npm-run-all css-compile css-purify css-prefix css-minify",
-    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css ${npm_package_files_scss}/main.scss:${npm_package_files_css}/main.css",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css ${npm_package_config_pathScss}/main.scss:${npm_package_config_pathCss}/main.css",
     "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
     "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache --rd",
-    "css-lint-vars": "fusv ${npm_package_files_scss}/",
+    "css-lint-vars": "fusv ${npm_package_config_pathScss}/",
     "css-minify": "npm-run-all --parallel css-minify-*",
-    "css-minify-main": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output ${npm_package_files_css}/main.min.css ${npm_package_files_css}/main.css",
+    "css-minify-main": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output ${npm_package_config_pathCss}/main.min.css ${npm_package_config_pathCss}/main.css",
     "css-prefix": "npm-run-all --parallel css-prefix-*",
-    "css-prefix-main": "postcss --config postcss.config.js --replace \"${npm_package_files_css}/*.css\" \"!${npm_package_files_css}/*.min.css\"",
+    "css-prefix-main": "postcss --config postcss.config.js --replace \"${npm_package_config_pathCss}/*.css\" \"!${npm_package_config_pathCss}/*.min.css\"",
     "css-purify": "npm-run-all --parallel css-purify-*",
-    "css-purify-main": "purifycss ${npm_package_files_css}/main.css index.html --info --out ${npm_package_files_css}/main.css",
+    "css-purify-main": "purifycss ${npm_package_config_pathCss}/main.css index.html --info --out ${npm_package_config_pathCss}/main.css",
     "init-browser": "npm-run-all --sequential init-firefox init-webserver",
     "init-firefox": "firefox --newinstance -p Dev &",
     "init-webserver": "firefox -p Dev http://localhost:3000",
@@ -31,10 +31,10 @@
     "js-minify": "npm-run-all --parallel js-minify-*",
     "test": "jest",
     "watch": "npm-run-all --parallel watch-*",
-    "watch-css-main": "nodemon --watch index.html --watch ${npm_package_files_scss}/ --watch assets/javascript/ --ext scss --exec \"npm-run-all css-lint css-compile css-purify css-prefix css-minify\"",
-    "watch-css-no-lint": "nodemon --watch index.html --watch ${npm_package_files_scss}/ --watch assets/javascript/ --ext scss --exec \"npm-run-all css-compile css-purifyjs css-prefix css-minify\"",
-    "watch-css-no-lint-purifyjs": "nodemon --watch index.html --watch ${npm_package_files_scss}/ --watch assets/javascript/ --ext scss --exec \"npm-run-all css-compile css-purifyjs css-prefix css-minify\"",
-    "watch-css-no-lint-no-purify": "nodemon --watch index.html --watch ${npm_package_files_scss}/ --watch assets/javascript/ --ext scss --exec \"npm-run-all css-compile css-prefix css-minify\"",
+    "watch-css-main": "nodemon --watch index.html --watch ${npm_package_config_pathScss}/ --watch assets/javascript/ --ext scss --exec \"npm-run-all css-lint css-compile css-purify css-prefix css-minify\"",
+    "watch-css-no-lint": "nodemon --watch index.html --watch ${npm_package_config_pathScss}/ --watch assets/javascript/ --ext scss --exec \"npm-run-all css-compile css-purifyjs css-prefix css-minify\"",
+    "watch-css-no-lint-purifyjs": "nodemon --watch index.html --watch ${npm_package_config_pathScss}/ --watch assets/javascript/ --ext scss --exec \"npm-run-all css-compile css-purifyjs css-prefix css-minify\"",
+    "watch-css-no-lint-no-purify": "nodemon --watch index.html --watch ${npm_package_config_pathScss}/ --watch assets/javascript/ --ext scss --exec \"npm-run-all css-compile css-prefix css-minify\"",
     "watch-dev": "npm-run-all --parallel browser-sync watch-css-no-lint"
   },
   "repository": {
@@ -70,6 +70,10 @@
     "postcss-cli": "^8.3.1",
     "purify-css": "^1.2.5",
     "sass": "^1.32.2",
-    "stylelint": "^13.8.0"
+    "stylelint": "^13.8.0",
+    "stylelint-config-recommended-scss": "~4.2.0"
+  },
+  "dependencies": {
+    "stylelint-scss": "~3.18.0"
   }
 }
