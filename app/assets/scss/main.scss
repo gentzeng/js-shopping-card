@@ -1,0 +1,27 @@
+// Itcss based structure.
+// Credits to Harry Roberts [https://github.com/csswizardry]
+//
+// 1. Settings................Global variables, config switches.
+// 2. Tools...................Default mixins and functions.
+// 3. Generic.................Ground-zero styles (resets, box-sizing).
+// 4. Elements................Unclassed HTML elements (type selectors).
+// 5. Objects.................Cosmetic-free design patterns.
+// 6. Components..............Designed components, chunks of UI.
+// 7. Trumps..................Helpers and overrides.
+// 
+
+
+// Settings   **************************************
+// @import "./settings";
+// Tools      **************************************
+// @import "./tools-mixins-section";
+// Generic    **************************************	
+// @import "./generic";
+// Elements   **************************************
+// @import "./elements";
+// Objects    **************************************
+// @import "./objects";
+// Components **************************************
+// @import "./components";
+// Trumps     **************************************
+// @import "./trumps";
