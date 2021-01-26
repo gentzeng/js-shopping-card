@@ -51,7 +51,7 @@
     "SonarQube"
   ],
   "author": "Georg Gentzen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gentzeng/js-shopping-card/issues"
   },
