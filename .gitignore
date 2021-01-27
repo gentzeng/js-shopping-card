@@ -17,6 +17,7 @@
 .DS_Store
 .idea
 .project
+.sonar-reports
 .settings
 .tmproj
 *.esproj
