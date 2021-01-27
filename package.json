@@ -14,7 +14,7 @@
     "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
     "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache --rd",
     "css-lint-vars": "fusv ${npm_package_config_pathScss}/",
-    "css-lint-sonar-report": "npm-run-all --continue-on-error --parallel css-lint-vars css-lint-sonar-report*",
+    "css-lint-sonar-report": "npm-run-all --continue-on-error --parallel css-lint-vars css-lint-sonar-report-*",
     "css-lint-sonar-report-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache --rd -f json -o stylelint-report.json",
     "css-minify": "npm-run-all --parallel css-minify-*",
     "css-minify-main": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output ${npm_package_config_pathCss}/main.min.css ${npm_package_config_pathCss}/main.css",
