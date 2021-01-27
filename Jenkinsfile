@@ -13,11 +13,11 @@ pipeline {
         SCANNER_HOME = tool 'SonarQubeScanner'
       }
       steps {
-        nodejs(nodeJSInstallationName: 'NodeJS 14.15.4' ) {
-         sh 'npm run lint-sonar-report' 
-        }
         dir('.sonar-reports') {
           writeFile file:'dummy',  text:''
+        }
+        nodejs(nodeJSInstallationName: 'NodeJS 14.15.4' ) {
+         sh 'npm run lint-sonar-report' 
         }
         withSonarQubeEnv('SonarQube') {
           sh '''$SCANNER_HOME/bin/sonar-scanner
