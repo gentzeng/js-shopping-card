@@ -14,7 +14,7 @@ pipeline {
       }
       steps {
         nodejs(nodeJSInstallationName: 'NodeJS 14.15.4' ) {
-         sh 'npm run lint' 
+         sh 'npm run lint-sonar-report' 
         }
         withSonarQubeEnv('SonarQube') {
           sh '''$SCANNER_HOME/bin/sonar-scanner
