@@ -16,6 +16,9 @@ pipeline {
         nodejs(nodeJSInstallationName: 'NodeJS 14.15.4' ) {
          sh 'npm run lint-sonar-report' 
         }
+        dir('.sonar-reports') {
+          writeFile file:'dummy',  text:''
+        }
         withSonarQubeEnv('SonarQube') {
           sh '''$SCANNER_HOME/bin/sonar-scanner
           '''
