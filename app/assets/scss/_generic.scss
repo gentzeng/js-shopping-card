@@ -1,5 +1,19 @@
 // generic
 
+$jar: 1em;
+
+@function calc($var) {
+	@return $var;
+}
+
 * {
 	box-sizing: border-box;
+}
+
+h1, h2 {
+	font-size: calc(2em);         	
+	color: lighten(50%);         	
+
+
+	    
 }
