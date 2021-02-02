@@ -14,7 +14,7 @@
     "css": "npm-run-all css-compile css-purify css-prefix css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css ${npm_package_config_pathScss}/main.scss:${npm_package_config_pathCss}/main.css",
     "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
-    "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache --rd",
+    "css-lint-stylelint": "stylelint \"${npm_package_config_pathAssets}/{css,scss}/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache --rd",
     "css-lint-vars": "fusv ${npm_package_config_pathScss}/",
     "css-minify": "npm-run-all --parallel css-minify-*",
     "css-minify-main": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output ${npm_package_config_pathCss}/main.min.css ${npm_package_config_pathCss}/main.css",
