@@ -7,6 +7,6 @@ function getAboutUsLink(language){
       case spanishCode.toLowerCase():
         return '/acerca-de';
     }
-    return false;
+    return false
 }
 module.exports = getAboutUsLink;
