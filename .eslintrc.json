@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "plugins": [
+    "jest"
+  ],
+  "extends": [
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jest/recommended",
+    "plugin:sonarjs/recommended",
+    "xo/esnext"
+  ],
+  "env": {
+    "jest/globals": true
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "MemberExpression": "off",
+        "SwitchCase": 1
+      }
+    ],
+    "multiline-ternary": [
+      "error",
+      "always-multiline"
+    ],
+    "new-cap": [
+      "error",
+      {
+        "properties": true
+      }
+    ],
+    "no-console": "error",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ]
+  }
+}

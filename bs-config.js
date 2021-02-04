@@ -17,8 +17,8 @@ module.exports = {
         "port": 3001
     },
     "files": [
-    	"./app/assets/css/*.css",
-    	"./app/index.html"
+        "app/assets/css/*.css",
+        "app/index.html"
     ],
     "watchEvents": [
         "change"
@@ -29,7 +29,7 @@ module.exports = {
     "watchOptions": {
         "ignoreInitial": true
     },
-    "server": "./",
+    "server": "./app",
     "proxy": false,
     "port": 3000,
     "middleware": false,
