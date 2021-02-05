@@ -1,2 +1,4 @@
 app/assets/images/*
 node_modules/*
+**/*.min.css
+**/*.css
