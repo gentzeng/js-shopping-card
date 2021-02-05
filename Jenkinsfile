@@ -29,7 +29,7 @@ pipeline {
         stage('Test') {
           steps {
             nodejs(nodeJSInstallationName: 'NodeJS 14.15.4' ) {
-              sh 'npm run test-coverage'
+              sh 'npm run sonar-report-test'
             }
           }
         }
