@@ -55,7 +55,7 @@
     "sonar-report-lint": "npm-run-all --silent -c -p lockfile-lint-e0 sonar-report-css-lint sonar-report-js-lint",
     "sonar-report-test": "npm-run-all --silent -c test-ci",
     "test": "jest",
-    "test-git-hook": "jest --bail 10 --silent",
+    "test-git-hook": "jest --silent",
     "test-coverage": "jest --coverage",
     "test-ci": "jest --silent --ci --coverage",
     "watch-css-build": "nodemon -w ${npm_package_config_pathScss}/ -w assets/javascript/ --ext scss --exec \"npm-run-all css-lint css-compile css-purify css-prefix css-minify\"",
