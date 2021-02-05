@@ -1,11 +1,10 @@
 {
   "extends": [
       "stylelint-config-recommended-scss",
-      "stylelint-config-sonarqube"
+      "stylelint-config-sonarqube",
+      "stylelint-config-prettier"
   ],
-  "plugin": ["stylelint-prettier"],
   "rules": {
-    "prettier/prettier": true,
     "function-disallowed-list": [
       "calc",
       "lighten",

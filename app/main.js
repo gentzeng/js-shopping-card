@@ -1,13 +1,13 @@
-const englishCode = 'en-US';
-const spanishCode = 'es-ES';
+const englishCode = "en-US";
+const spanishCode = "es-ES";
 function getAboutUsLink(language) {
   switch (language.toLowerCase()) {
     case englishCode.toLowerCase():
-      return '/about-us';
+      return "/about-us";
     case spanishCode.toLowerCase():
-      return '/acerca-de';
+      return "/acerca-de";
     default:
-      return '/about-us';
+      return "/about-us";
   }
 }
 
