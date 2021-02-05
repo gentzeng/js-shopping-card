@@ -113,6 +113,7 @@
     "purify-css": "^1.2.5",
     "sass": "^1.32.2",
     "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-config-sonarqube": "^1.0.3",
     "stylelint-prettier": "^1.1.2"
