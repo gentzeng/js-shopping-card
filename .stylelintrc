@@ -12,6 +12,7 @@
     ],
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
-    "max-nesting-depth": 3
+    "max-nesting-depth": 3,
+    "color-hex-length": "long"
   }
 }
