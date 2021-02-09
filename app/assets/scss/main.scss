@@ -13,12 +13,14 @@
 // Settings   **************************************
 // @import './settings';
 // Tools      **************************************
-// @import './tools-mixins-section';
+@import "./tools";
 // Generic    **************************************
 @import "./generic";
 // Elements   **************************************
 @import "./elements";
 // Objects    **************************************
+@import "./objects-container";
+@import "./objects-image";
 @import "./objects-overlay";
 // Components **************************************
 @import "./components-nav";
